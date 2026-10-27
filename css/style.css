@@ -1,0 +1,367 @@
+:root{
+    --background-navbar:rgb(204, 88, 175);
+    --background-footer: rgb(204, 88, 175);;
+    --color-footer: rgb(58, 20, 196);
+      --rosa-claro: #ffe4ee;
+    --rosa: #ff8fb8;
+    --rosa-fuerte: #e6407f;
+    --rosa-oscuro: #a3154f;
+    --blanco: #fff;
+}
+.navbar{
+    background-color: var(--background-navbar) !important;
+}
+.footer{
+      position: fixed;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+
+   color: var(--color-footer);
+   font-weight: bold;
+   min-height: 10vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--background-footer);
+   color: var(--color-footer);
+   padding: 6px 20px;
+   margin-top: 10px;
+
+}
+.img-footer{
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  float: right;
+}
+
+.btn-temas {
+    background-color: rgb(204, 88, 175);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(129, 166, 198, 0.45);
+    transition: all 0.3s ease;
+}
+
+.img-baner{
+ 
+  height: 100px;
+  margin: auto;
+  float: right;
+}
+iframe{
+  width: 100%;
+  height: 100vh;
+  border: none;
+}
+.logo{
+width: 100px;
+
+}
+.AMOR{
+  width: 5000px;
+}
+.Logo.png{
+  width: 5000px;
+  justify-content: center;
+  height:100vh;
+  display: flex;
+  align-items: center;
+}
+
+.espacio{
+  height: 300px;
+}
+.TEXTO2{
+margin: 29px;
+font-size: 19px;                                               
+text-align: justify;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ padding: auto;
+
+
+
+}
+.texto1{
+margin: auto;
+font-size:17,5px;
+text-align: justify;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ padding: 20px;
+ margin-bottom: 15px;
+
+
+
+}
+
+    .carousel-item {
+            height: 400px; /* Ajusta la altura del carrusel */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flecha {
+            font-size: 2em; /* Tamaño de la flecha */
+            color: white; /* Color de la flecha */
+        }
+
+    .login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ddade0, #dfe5e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.credito-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.credito-card img {
+    height: 280px;
+    object-fit: cover;
+}
+
+.credito-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(233, 228, 228, 0.801);
+}
+
+.credito-card .card-title {
+    color: #c07cce;
+    font-weight: bold;
+}
+
+    .contenedor{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .caja{
+            background-color: white;
+            width: 420px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p, li{
+            color: #555;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        ul{
+            padding-left: 20px;
+        }
+
+        /* Imagen */
+        .imagen{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .imagen img{
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+
+        /*aqui va*/
+        /* General */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar y footer */
+.navbar-custom,
+.footer-custom {
+    background-color: #f368e0;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.footer-custom {
+    color: #ffffff !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffe6fb !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-item:hover {
+    background-color: #ffe6fb;
+    color: #c218a8;
+}
+
+/* Login */
+.login-section {
+    margin-top: 40px;
+}
+
+.login-card {
+    border: none;
+    border-radius: 18px;
+}
+
+.login-card h1 {
+    color: #c218a8;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #f368e0;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.btn-login:hover {
+    background-color: #d94fc6;
+    color: #ffffff;
+}
+
+/* Usuario */
+.user-box {
+    color: #ffffff;
+}
+
+/* Contenido dinámico */
+.contenido {
+    background-color: #ffffff;
+    border-radius: 18px;
+}
+
+.page-card {
+    padding: 30px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+    color: #c218a8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.page-subtitle {
+    color: #f368e0;
+    font-weight: bold;
+}
+
+/* Imágenes dentro de páginas */
+.img-page {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Actividades */
+.activity-card {
+    border-left: 6px solid #f368e0;
+}
+
+/* Juego */
+.game-box {
+    background-color: #ffe6fb;
+    border-radius: 18px;
+    padding: 25px;
+}
+.video-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.btn-rosa {
+    background-color: #f368e0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 20px;
+}
+
+.btn-rosa:hover {
+    background-color: #d94fc7;
+    color: white;
+}
+
+
+.separador{
+ height:200px;
+}
+
+
+
+
+
+
+        
