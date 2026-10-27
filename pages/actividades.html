@@ -1,224 +1,394 @@
-
+<!-- ===================== ESTILOS ===================== -->
 <style>
-   .contenedor {
-            width: 90%;
-            max-width: 1000px;
-            margin: 50px auto;
-        }
-     .tarjeta {
-            background-color: white;
-            padding: 35px;
-            border: 2px solid #d8c5e8;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(118, 82, 158, 0.12);
-        }
+  :root {
+    --rosa-claro: #ff8fb8;
+    --rosa-fuerte: #e6407f;
+    --rosa-suave: #fff0f6;
+  }
 
-         .titulo {
-            text-align: center;
-            color: #76529e;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+  /* ---------- Contenedor y título ---------- */
+  .contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
 
-        .linea {
-            width: 80px;
-            height: 4px;
-            background-color: #c5a9df;
-            margin: 0 auto 35px;
-            border-radius: 10px;
-        }
+  .titulo {
+    text-align: center;
+    color: var(--rosa-fuerte);
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .linea {
+    width: 90px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--rosa-claro), var(--rosa-fuerte));
+    margin: 0 auto 40px;
+    border-radius: 10px;
+  }
+
+  /* ---------- Tarjetas ---------- */
+  .tarjeta {
+    height: 100%;
+    background-color: #fff;
+    border: 2px solid var(--rosa-claro);
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(230, 64, 127, 0.15);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(230, 64, 127, 0.28);
+  }
+
+  .tarjeta-icono {
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-fuerte));
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+    padding: 22px 0;
+  }
+
+  .tarjeta .card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .tarjeta .card-title {
+    color: var(--rosa-fuerte);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .tarjeta .card-text {
+    color: #6b6b6b;
+    font-size: 15px;
+    flex-grow: 1;
+  }
+
+  /* ---------- Botones ---------- */
+  .btn-rosa {
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-fuerte));
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 26px;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-rosa:hover,
+  .btn-rosa:focus {
+    color: #fff;
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+
+  /* ---------- Modales ---------- */
+  .modal-rosa .modal-content {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .modal-rosa .modal-header {
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-fuerte));
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .modal-rosa .modal-title {
+    font-weight: 700;
+  }
+
+  .modal-rosa .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+  }
+
+  .modal-rosa .modal-body {
+    background-color: var(--rosa-suave);
+    padding: 20px;
+  }
+
+  .modal-rosa .modal-footer {
+    background-color: var(--rosa-suave);
+    border-top: 1px solid var(--rosa-claro);
+  }
+
+  /* Marco para todos los iframes (Genially y páginas propias) */
+  .marco {
+    width: 100%;
+    height: 75vh;
+    border: none;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(230, 64, 127, 0.12);
+  }
 </style>
-  <div class="contenedor">
 
-      <h1 class="titulo">ACTIVIDADES</h1>
+<!-- ===================== TARJETAS ===================== -->
+<div class="contenedor">
 
-        <div class="linea"></div>
+  <h1 class="titulo">ACTIVIDADES EN GENIALLY</h1>
+  <div class="linea"></div>
 
-<div class="row">
-  <div class="col-sm-4 mb-3 mb-sm-0 tarjeta">
-    <div class="">
-      <div class="card-body">
-        <h5 class="card-title">Quiz de emociones</h5>
-        <p class="card-text">Aqui deben colocar una descripcion de la actividad.</p>
-        <a href="#" class="btn btn-primary " data-bs-target="#actividad1" data-bs-toggle="modal">Ir actividad</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 mb-3 mb-sm-0 tarjeta">
-    <div class="">
-      <div class="card-body">
-        <h5 class="card-title">Ahorcado</h5>
-        <p class="card-text">Aqui deben colocar una descripcion de la actividad.</p>
-        <a href="#" class="btn btn-primary " data-bs-target="#actividad2" data-bs-toggle="modal">Ir actividad</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 mb-3 mb-sm-0 tarjeta">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Preguntas</h5>
-        <p class="card-text">Aqui deben colocar una descripcion de la actividad.</p>
-        <a href="#" class="btn btn-primary " data-bs-target="#actividad3" data-bs-toggle="modal">Ir actividad</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 mb-3 mb-sm-0 tarjeta">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Sabias </h5>
-        <p class="card-text">Aqui deben colocar una descripcion de la actividad.</p>
-        <a href="#" class="btn btn-primary " data-bs-target="#actividad4" data-bs-toggle="modal">Ir actividad</a>
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="row g-4">
 
-<div class="modal fade" id="actividad1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Quizz emociones</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-        <div style="width: 100%;">
-          <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe
-              title="Quiz emociones" frameborder="0" width="1200px" height="675px"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              src="https://view.genially.com/69dd13edb3188f1c1203981a" type="text/html" allowscriptaccess="always"
-              allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+    <!-- 1. Quiz de emociones -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">😊</div>
+        <div class="card-body">
+          <h5 class="card-title">Quiz de emociones</h5>
+          <p class="card-text">Responde el quiz y descubre cuánto sabes sobre las emociones.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad1" style="color: white;">Ir a la actividad</button>
         </div>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second
-          modal</button>
-      </div>
     </div>
-  </div>
-</div>
-<div class="modal fade" id="actividad2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Ahorcados</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div style="width: 100%;">
-          <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe
-              title="___________" frameborder="0" width="1200px" height="675px"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              src="https://view.genially.com/69dfe92ca1b8c83373bda83e" type="text/html" allowscriptaccess="always"
-              allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+
+    <!-- 2. Ahorcado -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">🔤</div>
+        <div class="card-body">
+          <h5 class="card-title">Ahorcado</h5>
+          <p class="card-text">Adivina la palabra letra por letra antes de quedarte sin intentos.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad2" style="color: white;">Ir a la actividad</button>
         </div>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
-          first</button>
-      </div>
     </div>
-  </div>
-</div>
-<div class="modal fade" id="actividad3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Preguntas</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
 
-        <div style="width: 100%;">
-          <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe
-              title="Quiz Ruleta Genial" frameborder="0" width="1200px" height="675px"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              src="https://view.genially.com/69dfebd4e6eb9816228248e5" type="text/html" allowscriptaccess="always"
-              allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
-        </div>
-
-
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
-          first</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="actividad4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sabias</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-        <div style="width: 100%;">
-          <div style="position: relative; padding-bottom: 100%; padding-top: 0; height: 0;"><iframe
-              title="que no sabías" frameborder="0" width="800px" height="800px"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              src="https://view.genially.com/69ef6a371e4bec291d61d744" type="text/html" allowscriptaccess="always"
-              allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+    <!-- 3. Preguntas -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">❓</div>
+        <div class="card-body">
+          <h5 class="card-title">Preguntas</h5>
+          <p class="card-text">Gira la ruleta y responde las preguntas que te salgan.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad3" style="color: white;">Ir a la actividad</button>
         </div>
       </div>
+    </div>
+
+    <!-- 4. ¿Sabías qué? -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">💡</div>
+        <div class="card-body">
+          <h5 class="card-title">¿Sabías qué?</h5>
+          <p class="card-text">Descubre datos curiosos e interesantes sobre el tema.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad4" style="color: white;">Ir a la actividad</button>
+        </div>
+      </div>
+    </div>
+
+      <h1 class="titulo">ACTIVIDADES EN HTML</h1>
+
+    <!-- 5. Completar parejas -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">🧩</div>
+        <div class="card-body">
+          <h5 class="card-title">Completar parejas</h5>
+          <p class="card-text">Une cada elemento con su pareja correcta.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad5" style="color: white;">Ir a la actividad</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Actividad de selección -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">✅</div>
+        <div class="card-body">
+          <h5 class="card-title">Actividad de selección</h5>
+          <p class="card-text">Completa seleccionando la opción que corresponde.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad6" style="color: white;">Ir a la actividad</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Completar frase -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">✏️</div>
+        <div class="card-body">
+          <h5 class="card-title">Completar frase</h5>
+          <p class="card-text">Completa la frase con la palabra correcta.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad7" style="color: white;">Ir a la actividad</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Actividad de arrastre -->
+    <div class="col-sm-6 col-lg-3">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">🖐️</div>
+        <div class="card-body">
+          <h5 class="card-title">Actividad de arrastre</h5>
+          <p class="card-text">Arrastra cada elemento a donde corresponda.</p>
+          <button type="button" class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#actividad8" style="color: white;">Ir a la actividad</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== MODALES ===================== -->
+
+<!-- Modal 1: Quiz de emociones -->
+<div class="modal fade modal-rosa" id="actividad1" tabindex="-1" aria-labelledby="tituloActividad1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad1">Quiz de emociones</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Quiz de emociones" src="https://view.genially.com/69dd13edb3188f1c1203981a" allowfullscreen></iframe>
+      </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
-          first</button>
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="espacio"></div>
-| <div class="row">
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
-  </div>
-  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-
-    <iframe src="pages/parejas/"></iframe>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
-  </div>
-</div>
-
-<div class="espacio"></div>
-| <div class="row">
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
-  </div>
-  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-
-    <iframe src="pages/copletarfrase/"></iframe>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
+<!-- Modal 2: Ahorcado -->
+<div class="modal fade modal-rosa" id="actividad2" tabindex="-1" aria-labelledby="tituloActividad2" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad2">Ahorcado</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Ahorcado" src="https://view.genially.com/69dfe92ca1b8c83373bda83e" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="espacio"></div>
-| <div class="row">
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
-  </div>
-  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-
-    <iframe src="pages/completar2/"></iframe>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-
-
+<!-- Modal 3: Preguntas -->
+<div class="modal fade modal-rosa" id="actividad3" tabindex="-1" aria-labelledby="tituloActividad3" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad3">Preguntas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Quiz Ruleta" src="https://view.genially.com/69dfebd4e6eb9816228248e5" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Modal 4: ¿Sabías qué? -->
+<div class="modal fade modal-rosa" id="actividad4" tabindex="-1" aria-labelledby="tituloActividad4" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad4">¿Sabías qué?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Lo que no sabías" src="https://view.genially.com/69ef6a371e4bec291d61d744" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Modal 5: Completar parejas -->
+<div class="modal fade modal-rosa" id="actividad5" tabindex="-1" aria-labelledby="tituloActividad5" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad5">Completar parejas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Completar parejas" src="pages/parejas/"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6: Actividad de selección -->
+<div class="modal fade modal-rosa" id="actividad6" tabindex="-1" aria-labelledby="tituloActividad6" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad6">Actividad de selección</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Actividad de selección" src="pages/completar2/"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 7: Completar frase -->
+<div class="modal fade modal-rosa" id="actividad7" tabindex="-1" aria-labelledby="tituloActividad7" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad7">Completar frase</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Completar frase" src="pages/completarfrase/"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 8: Actividad de arrastre -->
+<div class="modal fade modal-rosa" id="actividad8" tabindex="-1" aria-labelledby="tituloActividad8" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloActividad8">Actividad de arrastre</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="marco" title="Actividad de arrastre" src="pages/arrastre/"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-rosa" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="separador"></div>
